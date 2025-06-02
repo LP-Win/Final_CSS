@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="./output.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <title>Elearning</title>
+  <script>
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+      );
+    </script>
 </head>
 
 <body>
@@ -21,7 +29,12 @@
             <li><a href="About_Us.html" class="text-white hover:text-gray-400">About Us</a></li>
             <li><a href="Course_Detail.html" class="text-white hover:text-gray-400">Contact</a></li>
             <li><a href="Login_Register.html" class="text-white hover:text-gray-400">Login</a></li>
-
+            <div class="flex min-md:px-5 max-sm:py-3 max-sm:pl-2 duration-500 lg:hover:scale-105">
+                <label class="inline-flex items-center cursor-pointer">
+                  <input id="btnMode" type="checkbox" value="" class="sr-only peer">
+                  <div class="relative w-11 h-6 bg-gray-400 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
+                </label>
+              </div>  
           </ul>
         </div>
       </nav>
@@ -30,15 +43,24 @@
 
 
   <!-- write your content here -->
+
+  <div class="h-150">
+    
+  </div>
+
   <main>
+    <div class="h-full flex w-full justify-center items-center dark:bg-gray-600 pt-3">
+      <div class="w-[80%]">
+        <h2 class="uppercase text-5xl dark:text-white"><b>Available Courses</b></h2>
+      </div>
+    </div>
+    <div class="h-full flex w-full justify-center items-center dark:bg-gray-600 p-2">
 
-    <div class="h-full flex w-full justify-center items-center dark:bg-gray-800 p-2">
-
-    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5">
+    <div class="w-[85%] grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5">
 
         <!-- card 01 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             
             <div class="p-2 flex justify-center">
                 <a href="#">
@@ -50,12 +72,12 @@
                 <div>
                     <a href="#">                                  
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             Flutter Mobile Development
                         </h5>
                     </a>
 
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         Flutter course is designed to develop multi-platform like iOS and Android App, Web, Desktop apps like MacOS, Windows and Linux using one code base. We also include with UI / UX design concept. Moreover, integrate with third-party libraries and other mobile functionality to make your app more professional. 
                     </p>
                 </div>
@@ -65,7 +87,7 @@
 
         <!-- card 02 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
 
             <div class="p-2 flex justify-center">
                 <a href="#">
@@ -77,12 +99,12 @@
                 <div>
                     <a href="#">
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             iOS Development
                         </h5>
                     </a>
 
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         iOS Development is designed for students to get started with design iOS App Concepts. This course will focus on languages syntax since basic levels and start to implement real user interfaces following with great user experiences and integrate others iOS features.
                     </p>
                 </div>
@@ -91,7 +113,7 @@
 
         <!-- card  03 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="#">
                     <img src="https://api.istad.co/media/image/354762b5-e27a-40ac-93c3-6de5cdb0362f.png" alt="SQL &amp; Data Modeling with PostgreSQL" class="h-75 p-5">
@@ -102,11 +124,11 @@
                 <div>
                     <a href="#">
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             SQL & Data Modeling with PostgreSQL
                         </h5>
                     </a>
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         SQL & Data Modeling with PostgreSQL is designed to help you understand in project analyze, database design and normalized data follow requirements from clients and Modeling the business flows. Please see the details course offers below,
                     </p>
                 </div>
@@ -115,7 +137,7 @@
 
         <!-- card 04 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="https://tailwindflex.com/tag/form">
                     <img src="https://api.istad.co/media/image/3a3d2bf2-670b-4f2f-a72a-b9b8ba3a0f38.png" alt="Web Design" class="h-75 p-5">
@@ -127,12 +149,12 @@
                 <div>
                     <a href="https://tailwindflex.com/tag/form">
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             Web Design
                         </h5>
                     </a>
 
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         Web Design course is designed for students to get started with Design Website Concepts. This course will focus on basic and advanced layout of website plus responsive design including UI/UX Design Concept. Moreover, CMS & Dynamic content with hosting application to access in public.
                     </p>
 
@@ -142,7 +164,7 @@
 
         <!-- card 05 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="#">
                     <img src="https://api.istad.co/media/image/835a7298-dbab-448d-8229-ee8a555c4846.png" alt="DevOps Engineering" class="h-75 p-5">
@@ -152,12 +174,12 @@
                 <div>
                     <a href="#">
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             DevOps Engineering
                         </h5>
                     </a>
 
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         This course will provide you with in-depth knowledge on how to build applications on the cloud. This program will help you learn the best practices for deploying SaaS, PaaS, and IaaS applications on Server. Master DevOps tools to automate and improve the overall efficiency and delivery of software applications.
                     </p>
                 </div>
@@ -166,7 +188,7 @@
 
         <!-- card 06 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="https://tailwindflex.com/tag/badge">
                     <img src="https://api.istad.co/media/image/73c3424a-39e0-450c-8969-8b35559594f5.png" alt="C++ Programming" class="h-75 p-5">
@@ -176,12 +198,12 @@
                 <div>
                     <a href="#">
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             C++ Programming
                         </h5>
                     </a>
 
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         C++ is one of the world's most popular programming languages. C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems. C++ programming course will guide you to from basic language syntax to OOP concept step by step. Please see the details course offer below,
                     </p>
                 </div>
@@ -190,7 +212,7 @@
 
         <!-- card 07 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="https://tailwindflex.com/tag/badge">
                     <img src="https://api.istad.co/media/image/3d7beaad-309a-4f2f-91e2-b3be705ef3f6.png" alt="Docker" class="h-75 p-5">
@@ -201,11 +223,11 @@
                 <div>
                     <a href="https://tailwindflex.com/tag/badge">
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             Docker
                         </h5>
                     </a>
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         Docker is a containerized tool that designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and deploy it as one package. This course covers,
                       </p>
                 </div>
@@ -214,7 +236,7 @@
 
         <!-- card 08 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="#">
                     <img src="https://api.istad.co/media/image/a3c4f87e-7a85-44c3-a568-6c5abef76cfe.png" alt="Data Analytics" class="h-75 p-5">
@@ -238,7 +260,7 @@
 
         <!-- card 09 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="https://tailwindflex.com/tag/call-to-action">
                     <img src="https://api.istad.co/media/image/0d254e62-5896-4c61-b1aa-c7de02d8d40d.png" alt="Android Development" class="h-75 p-5">
@@ -249,11 +271,11 @@
                 <div>
                     <a href="https://tailwindflex.com/tag/call-to-action">
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             Android Development
                         </h5>
                     </a>
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         Android is an open source and Linux-based operating system for mobile devices such as smartphones and tablet computers. This course will teach you basic Android programming and will also take you through some advance concepts related to Android application development and include with UX / UI Design concept. Please see the course offers below,
                     </p>
                 </div>
@@ -262,7 +284,7 @@
 
         <!-- card 10 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="#">
                     <img src="https://api.istad.co/media/image/dea9d967-e99e-49f3-a999-5b710dd5daf3.png" alt="NEXT.js" class="h-75 p-5">
@@ -273,12 +295,12 @@
                 <div>
                     <a href="#">
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             NEXT.js
                         </h5>
                     </a>
 
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         Next.js course is designed for students to develop single page application. It has all the tools you need to make the Web faster, plus Server-Side Rendering which essential for search engine optimization. We also include with UI/UX Design Concept for professional website development...
                     </p>
                 </div>
@@ -287,23 +309,22 @@
 
         <!-- card 11 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="#">
                     <img src="https://api.istad.co/media/image/b9bf96d7-c352-4533-8025-f017517ba648.png" alt="Linux Administrator" class="h-75 p-5">
                 </a>
             </div>
 
-
             <div class="px-4 pb-3">
                 <div>
                     <a href="#">
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             Linux Administrator
                         </h5>
                     </a>
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         Linux is a family of open-source Unix-like operating systems based on the Linux kernel. Linux is typically packaged in a Linux distribution. This course will covers fundamental concept in Operating systems and others, please see the details below:
                     </p>
                 </div>
@@ -312,7 +333,7 @@
 
         <!-- card 12 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="#">
                     <img src="https://api.istad.co/media/image/c8c41751-3bc0-4f07-9658-7d95efbae692.png" alt="Spring Framework" class="h-75 p-5">
@@ -328,7 +349,7 @@
                             Spring Framework
                         </h5>
                     </a>
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         Spring Course will help in understanding about Spring framework and how to build web applications, RESTful APIs using Spring, Spring MVC, Spring Boot, Thymeleaf, Spring JDBC etc. By the end of this course, students will understand all the below topics.
                     </p>
                 </div>
@@ -337,7 +358,7 @@
 
         <!-- card 13 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="#">
                     <img src="https://api.istad.co/media/image/24c392c2-152b-49c0-bddb-dc12b9403b3e.png" alt="Blockchain Development" class="h-75 p-5">
@@ -347,12 +368,12 @@
                 <div>
                     <a href="#">
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             Blockchain Development
 
                         </h5>
                     </a>
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         The Blockchain is a technology based on a decentralized network with “blocks” of information. Blockchain, sometimes referred to as Distributed Ledger Technology (DLT), makes the history of any digital asset unalterable and transparent through the use of decentralization and cryptographic hashing.
                     </p>
                 </div>
@@ -361,7 +382,7 @@
 
         <!-- card 14 -->
         <div
-            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-105">
+            class="relative bg-white border rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-700 transform transition duration-500 hover:scale-105">
             <div class="p-2 flex justify-center">
                 <a href="#">
                     <img src="https://api.istad.co/media/image/b0b3f26d-4d21-45c6-9ed4-8e1f9f11e534.png" alt="Java Programming" class="h-75 p-5">
@@ -373,11 +394,11 @@
                 <div>
                     <a href="#">
                         <h5
-                            class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
+                            class="uppercase text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white ">
                             Java Programming
                         </h5>
                     </a>
-                    <p class="antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
+                    <p class="break-keep hyphens-none antialiased text-gray-600 dark:text-gray-400 text-sm break-all">
                         Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. This course will cover from fundamental language to OOP concept.
                     </p>
                 </div>
@@ -406,27 +427,27 @@
   </section>
   </footer>
 <script>
-  const toggleSwitch = document.getElementById('switch-component');
-    const html = document.documentElement;
-
-    // Load saved theme and set checkbox state
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        html.classList.add('dark');
-        toggleSwitch.checked = true;
-    }
-
-    // Toggle theme on checkbox change
-    toggleSwitch.addEventListener('change', function() {
-        if (this.checked) {
-            html.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
+      const btnMode = document.getElementById("btnMode");
+      btnMode.onclick = function () {
+        console.log("Change Mode");
+        const usedMode = localStorage.theme;
+        console.log("Used Mode", usedMode);
+        if (usedMode === "light") {
+          localStorage.theme = "dark";
+          btnMode.textContent = "Light Mode";
         } else {
-            html.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
+          localStorage.theme = "light";
+          btnMode.textContent = "Dark Mode";
         }
-    });
-</script>
+
+        document.documentElement.classList.toggle(
+          "dark",
+          localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)
+        );
+      };
+    </script>
 
 </body>
 
